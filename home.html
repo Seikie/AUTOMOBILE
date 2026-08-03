@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Shop</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, black, #ff6a00);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #111;
+    width: 250px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px orange;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px orange;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.price {
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ff6a00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: orange;
+    box-shadow: 0 0 10px orange;
+}
+</style>
+</head>
+
+<body>
+
+<h1>AUTOMOBILE</h1>
+
+<div class="container">
+
+<!-- CARD TEMPLATE START -->
+
+<div class="card">
+    <img src="CAR PHOTOS/Audi A6 Allroad.jpg">
+    <h3>Audi A6 Allroad</h3>
+    <p>Brand: Audi</p>
+    <p class="price">₱6,800,000</p>
+    <button onclick="buyCar('Audi A6 Allroad', 6800000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Auto Union 1000 Coupe.jpg">
+    <h3>Auto Union 1000 Coupe</h3>
+    <p>Brand: Auto Union</p>
+    <p class="price">₱2,000,000</p>
+    <button onclick="buyCar('Auto Union 1000 Coupe', 2000000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Hyundai NEXO.jpg">
+    <h3>Hyundai NEXO</h3>
+    <p>Brand: Hyundai</p>
+    <p class="price">₱3,200,000</p>
+    <button onclick="buyCar('Hyundai NEXO', 3200000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Cupra Raval.jpg">
+    <h3>Cupra Raval</h3>
+    <p>Brand: Cupra</p>
+    <p class="price">₱2,500,000</p>
+    <button onclick="buyCar('Cupra Raval', 2500000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Honda Accord.jpg">
+    <h3>Honda Accord</h3>
+    <p>Brand: Honda</p>
+    <p class="price">₱2,800,000</p>
+    <button onclick="buyCar('Honda Accord', 2800000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Toyota Avalanche.jpg">
+    <h3>Toyota Avalanche</h3>
+    <p>Brand: Toyota</p>
+    <p class="price">₱3,100,000</p>
+    <button onclick="buyCar('Toyota Avalanche', 3100000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Porsche 718 Cayman.jpg">
+    <h3>Porsche 718 Cayman</h3>
+    <p>Brand: Porsche</p>
+    <p class="price">₱9,500,000</p>
+    <button onclick="buyCar('Porsche 718 Cayman', 9500000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Ferrari F12 Berlinetta.jpg">
+    <h3>Ferrari F12 Berlinetta</h3>
+    <p>Brand: Ferrari</p>
+    <p class="price">₱25,000,000</p>
+    <button onclick="buyCar('Ferrari F12 Berlinetta', 25000000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Bugatti Veyron.jpg">
+    <h3>Bugatti Veyron</h3>
+    <p>Brand: Bugatti</p>
+    <p class="price">₱80,000,000</p>
+    <button onclick="buyCar('Bugatti Veyron', 80000000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/BMW Series 1.jpg">
+    <h3>BMW Series 1</h3>
+    <p>Brand: BMW</p>
+    <p class="price">₱3,000,000</p>
+    <button onclick="buyCar('BMW Series 1', 3000000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Lamborghini Huracan Sterrato.jpg">
+    <h3>Lamborghini Huracan</h3>
+    <p>Brand: Lamborghini</p>
+    <p class="price">₱22,000,000</p>
+    <button onclick="buyCar('Lamborghini Huracan Sterrato', 22000000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Maserati Ghibli.jpg">
+    <h3>Maserati Ghibli</h3>
+    <p>Brand: Maserati</p>
+    <p class="price">₱7,000,000</p>
+    <button onclick="buyCar('Maserati Ghibli', 7000000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Nissan 370Z.jpg">
+    <h3>Nissan 370Z</h3>
+    <p>Brand: Nissan</p>
+    <p class="price">₱4,000,000</p>
+    <button onclick="buyCar('Nissan 370Z', 4000000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/VW Virtus.jpg">
+    <h3>VW Virtus</h3>
+    <p>Brand: Volkswagen</p>
+    <p class="price">₱1,500,000</p>
+    <button onclick="buyCar('VW Virtus', 1500000)">Buy</button>
+</div>
+
+<div class="card">
+    <img src="CAR PHOTOS/Suzuki Across.jpg">
+    <h3>Suzuki Across</h3>
+    <p>Brand: Suzuki</p>
+    <p class="price">₱2,200,000</p>
+    <button onclick="buyCar('Suzuki Across', 2200000)">Buy</button>
+</div>
+
+</div>
+
+<script>
+function buyCar(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ name, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.href = "checkout.html";
+}
+</script>
+
+</body>
+</html>
